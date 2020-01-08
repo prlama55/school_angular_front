@@ -1,0 +1,11 @@
+.nav-bar{
+  background-color: aqua;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+.nav-bar p{
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
