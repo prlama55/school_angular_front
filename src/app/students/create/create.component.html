@@ -1,1 +1,22 @@
-<p>create works!</p>
+<div class="container">
+  <form [formGroup]="formGroup" class="p-4" (ngSubmit)="saveStudent()">
+    <div class="form-group row">
+      <label class="col-md-2" for="name">Name</label>
+      <input formControlName="name" type="email" class="form-control col-md-4" id="name" aria-describedby="name" placeholder="Student's Name">
+      <label class="col-md-2" for="email">Email address</label>
+      <input formControlName="email"  type="email" class="form-control col-md-4" id="email" aria-describedby="emailHelp" placeholder="Student's Email">
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2" for="name">Batch</label>
+      <input formControlName="batch" type="text" class="form-control col-md-4" id="batch" aria-describedby="name" placeholder="Batch">
+      <label class="col-md-2" for="rollNumber">Roll Number</label>
+      <input formControlName="rollNumber" min="0"  type="number" class="form-control col-md-4" id="rollNumber" aria-describedby="emailHelp" placeholder="Roll Number">
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2" for="phoneNumber">Contact</label>
+      <input formControlName="phoneNumber" type="text" class="form-control col-md-4" id="phoneNumber" aria-describedby="name" placeholder="Contact">
+      </div>
+
+    <button type="submit" [disabled]="!formGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

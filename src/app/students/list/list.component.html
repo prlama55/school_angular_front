@@ -1,1 +1,24 @@
-<p>list works!</p>
+<div class="container m-5">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>SN</th>
+      <th>Name</th>
+      <th>Batch</th>
+      <th>Roll Number</th>
+      <th>Contact</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of studentList; let i = index" [attr.data-index]="i">
+      <td>{{i+1}}</td>
+      <td>{{student?.name}}</td>
+      <td>{{student?.batch}}</td>
+      <td>{{student?.rollNumber}}</td>
+      <td>{{student?.phoneNumber}}</td>
+      <td><button class="btn btn-outline-info" (click)="gotoDetail($event,student._id)">Details</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
